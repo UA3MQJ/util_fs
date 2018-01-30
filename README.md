@@ -19,10 +19,13 @@ end
 Настройка config.exs для FS
 
 ```elixir
-config :util_fs,
-  options: %{
-    fs: %{
-      fs_type: :minio
-    }
-  }
+config :util_fs, :options,
+  fs_type: :minio,
+  # aws parameters
+  access_key_id: "XXXXXXXXXXXXXXXXXXXX",
+  secret_access_key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  region: "us-east-1",
+  s3_scheme: "http://",
+  s3_host: "127.0.0.1",
+  s3_port: 9000
 ```

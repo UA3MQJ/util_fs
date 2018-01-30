@@ -15,17 +15,18 @@ defmodule UtilFS.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :ex_aws, :hackney],
+    [applications: [:logger, :ex_aws, :hackney, :confex],
      mod: {UtilFS, []}]
   end
 
   defp deps do
     [
       {:sweet_xml, "~> 0.6.5"},
-      {:httpoison, "~> 0.11.0"},
+      {:httpoison, "~> 0.13.0"},
       {:poison, "~> 2.0"},
       {:hackney, "~> 1.6"},
-      {:ex_aws, "~> 1.1.2"}
+      {:ex_aws, "~> 1.1.2"},
+      {:confex, "~> 3.3.0"}
     ]
   end
 
